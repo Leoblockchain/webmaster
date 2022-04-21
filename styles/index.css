@@ -1,0 +1,139 @@
+/* HEADER */
+
+* {
+
+  background-color: #e5e5e5;
+
+  font-family: 'Poppins', sans-serif;
+
+  scroll-behavior: smooth;
+
+}
+
+.css-logo {
+
+  width: 4rem;
+
+  height: 4rem;
+
+}
+
+.main-title {
+
+  display: inline;
+
+  color: #000000;
+
+}
+
+.navbar {
+
+  display: inline;
+
+  margin-left: 6rem;
+
+}
+
+.navbar-item {
+
+  text-decoration: none;
+
+  color: #000000;
+
+  margin: 0 1rem;
+
+}
+
+/* TIPOS */
+
+#tipos {
+
+  margin-top: 5rem;
+
+}
+
+#tipos h2 {
+
+  color: #000000;
+
+}
+
+#tipos h3 {
+
+  color: #000000;
+
+}
+
+.block-example {
+
+  height: 5rem;
+
+  background-color: #14213d;
+
+  color: #e5e5e5;
+
+}
+
+#tipos input {
+
+  background-color: #ffffff;
+
+}
+
+#tipos button {
+
+  background-color: #ffffff;
+
+}
+
+.box {
+
+  display: inline-block;
+
+  width: 6rem;
+
+  height: 6rem;
+
+  background-color: #fca311;
+
+  margin-right: 3rem;
+
+}
+
+/* DISPLAY */
+
+#display {
+
+  margin-top: 5rem;
+
+}
+
+#display h2 {
+
+  color: #000000;
+
+}
+
+#display h3 {
+
+  color: #000000;
+
+}
+
+.block-btn {
+
+  display: block;
+  
+}
+
+.display-inline {
+
+  height: 5rem;
+
+  background-color: #fca311;
+
+  color: #000000;
+
+  display: inline;
+
+}

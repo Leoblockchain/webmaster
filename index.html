@@ -2,75 +2,91 @@
 <html lang="en">
 
   <head>
-    
+
     <meta charset="UTF-8">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>CSS</title>
 
-    <!-- PRIMERA FORMA -->
-    <!-- <style>
-      /* estilos */
-    </style> -->
+    <!-- POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- SEGUNDA FORMA -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" 
+    crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="styles/index.css">
 
   </head>
 
   <body>
-
-    <!-- TERCERA FORMA -->
-    <!-- <div style="color: blue;"></div> -->
     
-    <!-- EJEMPLO CASCADA -->
-    <!-- <div></div> -->
+    <header>
 
-    <!-- EJEMPLO ESPECIFICIDAD -->
-    <!-- <div class="bContainerClass" id="bContainerId"></div> -->
+      <img src="img/cssLogo.png" alt="logo css 3" class="css-logo">
 
-    <!-- EJEMPLOS SELECTORES AVANZADOS -->
+      <h1 class="main-title">Welcome to more CSS</h1>
 
-    <!-- <div id="container">
-      <p>parrafo 1</p>
-    </div> -->
+      <nav class="navbar">
 
-    <!-- <div class="classA"></div>
-    <div class="classA classB"></div> -->
+        <a href="#tipos" class="navbar-item">
+          tipos de elementos
+        </a>
 
-    <!-- <div>div</div>
-    <p>parrafo</p> -->
+        <a href="#display" class="navbar-item">display</a>
 
-    <!-- EJEMPLOS PROPIEDADES -->
+        <a href="pages/about.html" class="navbar-item">about</a>
 
-    <!-- <p class="pExample">hola soy un parrafo</p> -->
+      </nav>
 
-    <!-- <div class="pixExample">with pixels</div>
+    </header>
 
-    <div class="perExample">with percentage</div>
+    <main>
 
-    <div class="vwExample">with vw</div>
+      <div id="tipos">
 
-    <hr>
+        <h2>Tipos de elementos</h2>
 
-    <div class="divExampleWithBorders">
+        <h3>block</h3>
+        <div class="block-example">
+          Ocupo todo el ancho de pantalla
+        </div>
 
-      <div class="pixExample">with pixels</div>
+        <h3>inline</h3>
+        <input type="text" placeholder="no ocupo todo el ancho">
+        <button>yo tampoco</button>
 
-      <div class="perExample">with percentage</div>
+      </div>
 
-      <div class="vwExample">with vw</div>
+      <div id="display">
 
-    </div> -->
+        <h2>Propiedad display</h2>
+        
+        <h3>display: inline</h3>
+        <div class="display-inline">
+          Soy un div pero no ocupo todo el ancho!
+        </div>
 
-    <!-- <div class="bordersPaddingsMargins">
-      Hola desde un div!
-      <p>hola soy un parrafo</p>
-    </div> -->
-    
+        <h3>display: block</h3>
+        <button class="block-btn">boton block</button>
+        <button>boton normal</button>
+        <button>boton normal</button>
+
+        <h3>display: inline-block</h3>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+      </div>
+
+    </main>
+
   </body>
 
 </html>
