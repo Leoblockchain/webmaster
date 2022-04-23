@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   
   background-color: #e5e5e5;
@@ -16,6 +17,20 @@ body {
 
 /* HEADER */
 
+=======
+/* HEADER */
+
+* {
+
+  background-color: #e5e5e5;
+
+  font-family: 'Poppins', sans-serif;
+
+  scroll-behavior: smooth;
+
+}
+
+>>>>>>> d83609510dfd06831e271e068c98b20b70dc9aef
 .css-logo {
 
   width: 4rem;
@@ -30,8 +45,11 @@ body {
 
   color: #000000;
 
+<<<<<<< HEAD
   font-size: 2rem;
 
+=======
+>>>>>>> d83609510dfd06831e271e068c98b20b70dc9aef
 }
 
 .navbar {
@@ -129,9 +147,15 @@ body {
 }
 
 .block-btn {
+<<<<<<< HEAD
   
   display: block;
 
+=======
+
+  display: block;
+  
+>>>>>>> d83609510dfd06831e271e068c98b20b70dc9aef
 }
 
 .display-inline {
@@ -144,6 +168,7 @@ body {
 
   display: inline;
 
+<<<<<<< HEAD
 }
 
 /* POSITION */
@@ -211,4 +236,6 @@ body {
 
   bottom: 0;
   
+=======
+>>>>>>> d83609510dfd06831e271e068c98b20b70dc9aef
 }
