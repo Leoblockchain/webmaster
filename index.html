@@ -1,118 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
   <head>
+
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML</title>
+    
+    <title>CSS</title>
+
+    <!-- POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" 
+    crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/index.css">
+
   </head>
 
   <body>
 
     <header>
 
-      <img src="img/htmLogo.png" alt="logo html">
+      <img src="img/cssLogo.png" alt="logo css 3" class="css-logo">
 
-      <h1>Titulo (nombre del sitio, por ejemplo)</h1>
+      <h1 class="main-title">Welcome to El Himalaya</h1>
 
-      <nav>
-        <a href="ruta">Home</a>
-        <a href="pages/about.html">About us</a>
-        <a href="ruta">Products</a>
+      <nav class="navbar">
+
+        <a href="#tipos" class="navbar-item">
+          tipos de elementos
+        </a>
+
+        <a href="#display" class="navbar-item">display</a>
+
+        <a href="#position" class="navbar-item">position</a>
+
+        <a href="pages/about.html" class="navbar-item">about</a>
+
       </nav>
 
     </header>
 
     <main>
 
-      <p>Bienvenidos a la primera clase de HTML! Gracias por venir, espero que les sirva mucho!💛</p>
+      <div id="tipos">
 
-      <hr>
+        <h2>Tipos de elementos</h2>
 
-      <!-- login -->
-      <div>
+        <h3>block</h3>
+        
+        <div class="block-example">
+          Ocupo todo el ancho de pantalla
+        </div>
 
-        <h2>log in first, please</h2>
+        <h3>inline</h3>
 
-        <form>
+        <input type="text" placeholder="no ocupo todo el ancho">
 
-          <label for="username">username:</label>
-          <input type="text" name="username" required>
-
-          <br><br>
-
-          <input type="password" placeholder="password" maxlength="6">
-
-          <br><br>
-
-          <label for="saveUserData">recordar datos?</label>
-          <input type="checkbox" name="saveUserData">
-
-          <br><br>
-
-          <input type="button" value="log in">
-
-          <input type="submit" value="submit">
-
-        </form>
+        <button>yo tampoco</button>
 
       </div>
 
-      <hr>
+      <div id="display">
 
-      <!-- sign up -->
-      <div>
+        <h2>Propiedad display</h2>
+        
+        <h3>display: inline</h3>
 
-        <h2>don't have an account? Sign up!</h2>
+        <div class="display-inline">
 
-        <form>
+          Soy un div pero no ocupo todo el ancho!
+        </div>
 
-          <input type="email" placeholder="your email">
+        <h3>display: block</h3>
 
-          <br><br>
+        <button class="block-btn">boton block</button>
 
-          <input type="text" placeholder="your password">
+        <button>boton normal</button>
 
-          <br><br>
+        <button>boton normal</button>
 
-          <label for="userGender">gender:</label>
+        <h3>display: inline-block</h3>
 
-          <br>
+        <div class="box"></div>
 
-          <label>hombre cis</label>
-          <input type="radio" name="userGender">
+        <div class="box"></div>
 
-          <label>mujer cis</label>
-          <input type="radio" name="userGender">
+        <div class="box"></div>
 
-          <label>homo</label>
-          <input type="radio" name="userGender">
+        <div class="box"></div>
 
-          <label>bi</label>
-          <input type="radio" name="userGender">
+      </div>
 
-          <label>trans</label>
-          <input type="radio" name="userGender">
+      <div id="position">
 
-          <label>no binario</label>
-          <input type="radio" name="userGender">
-          
-          <br><br>
+        <h2>Position</h2>
 
-          <button type="submit">create account</button>
+        <h3>position: relative</h3>
 
-          <button type="reset">borrar campos</button>
+        <div class="box relative"></div>
+
+        <h3>position: fixed</h3>
+
+        <div class="box fixed">Estoy fijo aqui</div>
+
+        <h3>position: absolute</h3>
+
+        <div class="container">
+          Soy un div con position: relative
+          <div class="box absolute">Soy un div con position: absolute</div>
+        </div>
+
+        <h3>position: sticky</h3>
+
+        <div class="box sticky">Soy stickyman!</div>
 
       </div>
 
     </main>
-
-    <footer>
-
-      <h6>Super clase de Luis. Todos los derechos reservados&copy;</h6>
-    
-    </footer>
 
   </body>
 
