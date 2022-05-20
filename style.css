@@ -4,17 +4,20 @@ body {
 
   height: 100vh;
 
+  background-color: #333533;
+
   display: flex;
 
   justify-content: center;
 
   align-items: center;
 
-  background-color: #FCF300;
-
 }
 
 h1 {
 
+  color: #ffd100;
+
   font-size: 5rem;
+
 }
