@@ -1,0 +1,23 @@
+.box {
+
+  width: 100px;
+
+  height: 100px;
+
+  margin-bottom: 50px;
+
+  background-color: #8a2be2;
+
+}
+
+.newBox {
+
+  width: 100px;
+
+  height: 100px;
+
+  margin-bottom: 50px;
+
+  background-color: #0000ff;
+
+}

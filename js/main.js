@@ -1,248 +1,174 @@
-// SIN OBJETOS
+// DOM
 
-// let userName = 'pepito';
-
-// let userAge = 25;
-
-// let userMail = 'pepito@gmail.com';
-
-// CON OBJETOS
-
-// const user = {name: 'pepito', age: 25, mail: 'pepito@gmail.com', isAlive: true} // Objeto literal
-
-// console.log(user);
+// console.log(document);
 
 
 
-// ACCEDER A PROPIEDADES
 
-// console.log(user.name); //pepito
-
-// console.log(user.age); // 25
-
-// console.log(user.mail); // pepito@gmail.com
-
-// console.log(user.isAlive); // false
-
-// La sintaxis es -> objeto.propiedad
+// ACCESO AL DOM
 
 
-// ASIGNAR NUEVOS VALORES A PROPIEDADES
+// ID
 
-// user.name = 'maria';
+// const mainTitle = document.getElementById('mainTitle');
 
-// // console.log(user.name);
+// console.log(mainTitle);
 
-// user.age = 105;
+/* 
 
-// // console.log(user.age);
+  IMPORTANTE ❗
 
-// if (user.age > 100) {
+  - No escribimos el numeral -> # ❌
 
-//   user.isAlive = false;
+  - Devuelve un unico elemento.
+
+*/
+
+
+// CLASS
+
+// const boxes = document.getElementsByClassName('box');
+
+// console.log(boxes);
+
+/* 
+
+  IMPORTANTE ❗
+
+  - No escribimos el punto -> . ❌
+
+  - Devuelve varios elementos.
+
+  - Devuelve un HTMLCollection, algo parecido a un array, pero no es exactamente uno.
+
+*/
+
+// POR QUE ES IMPORTANTE SABER QUE DEVUELVE UN HTMLCOLLECTION Y NO UN ARRAY?
+
+// boxes.forEach(box => console.log(box)); //❌
+
+
+// for (const box of boxes) { // ✅
   
-// }
-
-// console.log(user.isAlive);
-
-
-
-// CLASES
-
-// class User { // PascalCase
-
-//   constructor(name, age, mail, isAlive) {
-
-//     this.name = name;
-
-//     this.age = age;
-
-//     this.mail = mail;
-
-//     this.isAlive = isAlive;
-
-//   }
+//   console.log(box);
 
 // }
 
 
-// const newUser = new User('homero', 40, 'homero@gmail.com', true);
+// TAG
 
-// console.log(newUser);
+// const divs = document.getElementsByTagName('div');
 
-// const newUserB = new User('luis', 50, 'luis@gmail.com', true);
-
-// console.log(newUserB.isAlive);
-
-// newUser.age = 50;
-
-// console.log('la nueva edad es: ' + newUser.age);
-
-
-// class Gato {
-
-//   constructor(color, edad, nombre) {
-
-//     this.color = color;
-
-//     this.edad = edad;
-
-//     this.nombre = nombre;
-
-//   }
-
-//   maullar() {
-
-//     console.log('miau');
-
-//   }  
-
-// }
-
-// const newGato = new Gato('blanco', 2, 'elmichi');
-
+// console.log(divs);
 
 /* 
 
-  Importante acerca de las clases❗
+  IMPORTANTE ❗
 
-    🔹 Se escriben con PascalCase.
-    🔹 Sus nombres suelen estar en singular.
+  - No escribimos <> -> <div> ❌
+
+  - Devuelve varios elementos.
+
+  - Tambien devuelve un HTMLCollection.
 
 */
 
 
+// QUERY SELECTOR
 
-// METODOS
+// Un unico elemento
 
-// class Product {
+// const mainTitle = document.querySelector('#mainTitle');
 
-//   constructor(name, price, stock) {
+// console.log(mainTitle);
 
-//     this.name = name;
+// const boxes = document.querySelector('.box');
 
-//     this.price = price;
+// console.log(boxes);
 
-//     this.stock = stock;
+// Varios elementos
 
-//   }
+// const boxes = document.querySelectorAll('.box');
 
-//   handleStock(cantidad) {
-
-//     this.stock = this.stock - cantidad;
-
-//     return this.stock;
-
-//   }
-
-//   changePrice(newPrice) {
-
-//     this.price = newPrice;
-
-//     return this.price;
-
-//   }
-
-//   calcularIva() {
-
-//     return this.price*1.21;
-    
-//   }
-
-// }
-
-// const iphone = new Product('iphone', 1000, 10);
-
-// console.log(iphone.stock);
-
-
-// Un usuario realizo una compra
-
-// let cantidad = iphone.handleStock(3);
-
-// console.log(cantidad);
-
-// console.log(iphone.changePrice(2000));
-
-// Nomenclatura: objeto.metodo()
-
-// console.log(iphone.stock);
-
-// ERROR COMUN
-
-// iphone.handleStock(); // No podemos usar un metodo sin primero hacer referencia a un objeto que lo pueda utilizar❌
-
+// console.log(boxes);
 
 /* 
 
-  Importante de los metodos❗
+  IMPORTANTE ❗
 
-    🔹No son exactamente lo mismo que una funcion.
-    🔹Se escriben con camelCase.
-    🔹Tienen que ser utiles para el contexto de la clase.
+  - Con querySelector si escribimos numeral si es un id y punto si es una clase. 
+
+  - querySelector devuelve un solo elemento sin importar si es id, clase o tag.
+
+  - querySelectorAll devuelve todas las coincidencias.
+
+  - En el caso de querySelectorAll, devuelve una NodeList, algo como un array, pero tampoco es un array.
 
 */
 
+// POR QUE ES IMPORTANTE SABER QUE DEVUELVE UNA NODELIST Y NO UN ARRAY?
+
+// boxes.push('holi'); // ❌
 
 
-// METODOS UTILES PARA ARRAYS
 
 
-// find
-
-// const products = [
-//   {name: 'iphone', price: 1000},
-//   {name: 'xiaomi', price: 500},
-//   {name: 'motorola', price: 600},
-//   {name: 'samsung', price: 800}
-// ]
-
-// const iphone = products.find(product => product.name === 'samsung');
-
-// console.log(iphone);
-
-// const numeros = [1,2,3,4,5]
-
-// let numeroTres = numeros.find(numero => numero === 3);
-
-// console.log(numeroTres);
-
-// const xiaomi = products.find(product => product.price === 500);
-
-// console.log(xiaomi);
+// MODIFICAR DOM
 
 
-// filter
+// innerHTML
 
-// const menosDeMil = products.filter(product => product.price < 200);
+// const header = document.querySelector('header');
 
-// console.log(menosDeMil);
+// console.log(header.innerHTML);
 
-// const menosDeMil = products.filter(product => product.price === 1200);
+// const main = document.querySelector('main');
 
-// console.log(menosDeMil);
+// console.log(main.innerHTML);
 
-// const argentinos = usuarios.filter(usuario => usuario.nacionalidad === 'argentina' && usuario.edad < 25);
+// innerText
+
+// const mainTitle = document.getElementById('mainTitle');
+
+// console.log(mainTitle.innerText);
 
 
-// map
 
-// const arrayConInflacion = products.map(product => { // :(
 
-//   return {name: product.name, price: product.price*1.50}
+// CREAR ELEMENTOS DESDE JS Y AGREGARLOS AL DOM
 
-// });
+// const newBox = document.createElement('div'); // creamos un nuevo div
 
-// console.log(arrayConInflacion);
+// newBox.classList.add('newBox'); // le agregamos la clase newBox
 
-// const names = products.map(product => product.name);
+// const main = document.querySelector('main');
 
-// console.log(names);
+// main.append(newBox); // agregamos el nuevo div al DOM
 
-// const newPrices = products.map(product => {
 
-//   return {name: product.name, price: product.price*1.50}
 
-// });
 
-// console.log(newPrices);
+// ELIMINAR ELEMENTOS DEL DOM DESDE JS
+
+
+// Un elemento en especifico
+
+// const mainTitle = document.getElementById('mainTitle');
+
+// mainTitle.remove();
+
+
+// Vaciar por completo un nodo
+
+// const main = document.querySelector('main');
+
+// main.innerHTML = '';
+
+
+
+
+// VALORES DE INPUTS
+
+// document.getElementById('inputPrueba').value = 'holi';
+
+// document.getElementById('areaPrueba').value = 'hello from JS';
