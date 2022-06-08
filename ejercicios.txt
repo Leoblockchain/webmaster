@@ -1,9 +1,0 @@
-1) Pedir al usuario un numero y mostrar todos los numeros pares que tiene antes por consola, 
-incluyendo al propio numero ingresado por el usuario.
-
-
-2) Pedir al usuario la clave y pedirsela hasta que ingrese la correcta. La clave es "abrete sesamo".
-
-
-3) Vamos a jugar a las adivinanzas. El usuario tiene maximo 3 oportunidades para acertar. Pidele que ingrese un color,
-si es igual a "turquesa", gana! Si no, le restas 1 oportunidad. Al llegar a 0 oportunidades, pierde el juego.
