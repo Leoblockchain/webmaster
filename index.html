@@ -10,36 +10,38 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="style.css">
 
-    <title>DOM</title>
+    <title>Sign up</title>
 
   </head>
 
   <body>
+
+    <div class="containerBg"></div>
+
+    <div class="containerForm">
+
+      <form class="signUpForm">
+
+        <input type="email" required placeholder="email" 
+        class="email inputForm">
+
+        <input type="password" required placeholder="password" 
+        class="password inputForm">
+
+        <button type="submit" class="formBtn">Sign in</button>
+
+      </form>
+
+      <p class="errorMessage"></p>
+      
+      <p class="successMessage"></p>
+
+    </div>
+
+    <script src="./js/index.js" type="module"></script>
     
-    <header>
-
-      <h1 id="mainTitle">DOM</h1>
-
-    </header>
-
-    <main>
-
-      <div class="box"></div>
-
-      <div class="box"></div>
-
-      <div class="box"></div>
-
-      <!-- <input type="text" id="inputPrueba">
-
-      <textarea id="areaPrueba" cols="30" rows="10"></textarea> -->
-
-    </main>
-
-    <script src="js/main.js"></script>
-
   </body>
 
 </html>

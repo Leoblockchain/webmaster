@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  display: flex;
+}
+
+.containerBg {
+  width: 50vw;
+  height: 100vh;
+  background-color: rgb(2, 161, 182);
+}
+
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.containerForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputForm {
+  width: 300px;
+  padding: 10px;
+  border-radius: 50px;
+  margin-top: 10px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.formBtn {
+  width: 150px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: rgb(2, 159, 181);
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.errorMessage {
+  color: rgb(255, 0, 0);
+  text-transform: uppercase;
+}
+
+.successMessage {
+  color: rgb(0, 128, 0);
+  text-transform: uppercase;
+}
