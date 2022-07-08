@@ -1,7 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
-import { errorMessage, successMessage } from "./handleSignIn.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
 
+import { 
+  getFirestore, 
+  collection, 
+  getDocs 
+} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAr5Q6XkY3dlus7-bVQqDhAcy81Ouy_iZg",
@@ -14,38 +17,28 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+const db = getFirestore(app);
 
-const createUser = async (email, password) => {
-
-  try {
-    
-    const response = await createUserWithEmailAndPassword(auth, email, password);
+export const getProducts = async () => {
   
-    console.log(response.user);
+  const querySnapshot = await getDocs(collection(db, "products"));
 
-  } catch (error) {
-    
-    console.log(error.message);
-
-  }
+  return querySnapshot;
 
 }
 
-const signIn = async (email, password) => {
+export const getMobiles = async (id) => {
 
-  try {
-    
-    const response = await signInWithEmailAndPassword(auth, email, password);
+  const products = await getDocs(collection(db, "products"));
 
-    successMessage();
-    
-  } catch (error) {
-    
-    errorMessage();
+  const mobiles = []
 
-  }
+  products.forEach(product => {
+
+    if (product.data().type === 'mobile') mobiles.push(product);
+
+  });
+
+  return mobiles;
 
 }
-
-export { createUser, signIn }
